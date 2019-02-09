@@ -51,9 +51,9 @@ public class MyApplication {
             current.show();
             return;
         }
-        Form hi = new Form("Hi World", BoxLayout.y());
-        hi.add(new Label("Hi World"));
-        hi.show();
+//        StartForm hi = new StartForm("Hi World", BoxLayout.y());
+        StartForm startForm = new StartForm();
+        startForm.show();
     }
 
     public void stop() {

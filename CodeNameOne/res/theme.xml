@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource majorVersion="1" minorVersion="9" useXmlUI="false">
+    <image name="headerorange.png"  />
+    <theme name="Theme">
+        <val key="@includeNativeBool" value="true" />
+        <font key="Label.dis#font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.5" />
+        <font key="Label.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.5" />
+        <val key="Label.padUnit" value="2,2,2,2" />
+        <val key="Label.padding" value="4.0,4.0,3.0,3.0" />
+        <border key="Task.border" type="underline"  millimeters="false" thickness="2.0" color="13421772" />
+        <val key="Task.padding" value="0.0,0.0,0.0,0.0" />
+        <val key="Title.fgColor" value="000000" />
+        <font key="Title.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="1" actualSize="18.0" />
+        <val key="Title.transparency" value="0" />
+        <val key="TitleCommand.fgColor" value="ffffff" />
+        <font key="TitleCommand.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="5.0" />
+        <val key="TitleCommand.transparency" value="0" />
+        <border key="ToggleButton.border" type="empty" />
+        <val key="ToggleButton.derive" value="ToggleButton" />
+        <val key="ToggleButton.fgColor" value="cfcfcf" />
+        <border key="ToggleButton.sel#border" type="empty" />
+        <val key="ToggleButton.sel#derive" value="ToggleButton" />
+        <val key="ToggleButton.sel#fgColor" value="6868FD" />
+        <val key="Toolbar.bgColor" value="000000" />
+        <val key="Toolbar.bgImage" value="headerorange.png" />
+        <val key="Toolbar.bgType" value="33" />
+        <border key="Toolbar.border" type="underline"  millimeters="false" thickness="1.0" color="0" />
+        <val key="Toolbar.dis#bgImage" value="headerorange.png" />
+        <val key="Toolbar.dis#bgType" value="1" />
+        <val key="Toolbar.fgColor" value="000000" />
+        <val key="Toolbar.padUnit" value="2,2,2,2" />
+        <val key="Toolbar.padding" value="3.0,3.0,3.0,3.0" />
+        <border key="press#border" type="empty" />
+        <val key="press#derive" value="ToggleButton" />
+        <val key="press#fgColor" value="6868FD" />
+    </theme>
+</resource>
