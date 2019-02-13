@@ -34,6 +34,12 @@ public class MyApplication {
 
         // Pro only feature, uncomment if you have a pro subscription
 //        Log.bindCrashProtection(true);
+        
+        //gap between label icon and the text.
+        Label.setDefaultGap(convertToPixels(2));
+        
+        //only support portrait
+        Display.getInstance().lockOrientation(true);
 
         addNetworkErrorListener(err -> {
             // prevent the event from propagating
@@ -52,7 +58,7 @@ public class MyApplication {
             return;
         }
 //        StartForm hi = new StartForm("Hi World", BoxLayout.y());
-        StartForm startForm = new StartForm();
+        LoginForm startForm = new LoginForm();
         startForm.show();
     }
 

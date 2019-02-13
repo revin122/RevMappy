@@ -15,11 +15,11 @@ import com.revin122.revmappy.views.ViewItem;
 import com.codename1.ui.CN;
 import com.codename1.ui.Component;
 
-public class StartForm extends Form {
+public class LoginForm extends Form {
 	private final static String FILENAME = "saveitems";
 	private ActionListener saveListener;
 	
-	public StartForm() {
+	public LoginForm() {
 		super("RevMappy", BoxLayout.y());
 		
 		getToolbar().addMaterialCommandToRightBar("", FontImage.MATERIAL_CLEAR_ALL, e -> clearAll());
@@ -58,9 +58,9 @@ public class StartForm extends Form {
 	}
 	
 	private void load() {
-		if(CN.existsInFileSystem(StartForm.FILENAME)) {
+		if(CN.existsInFileSystem(LoginForm.FILENAME)) {
 			try(DataInputStream inputStream = new DataInputStream(
-					CN.createStorageInputStream(StartForm.FILENAME));) {
+					CN.createStorageInputStream(LoginForm.FILENAME));) {
 				int size = inputStream.readInt();
 				for (int iter = 0; iter < size; iter++) {
 					boolean checked = inputStream.readBoolean();
@@ -76,7 +76,7 @@ public class StartForm extends Form {
 	
 	private void save() {
 		try(DataOutputStream outputStream = new DataOutputStream(
-				CN.createStorageOutputStream(StartForm.FILENAME))) {
+				CN.createStorageOutputStream(LoginForm.FILENAME))) {
 			outputStream.writeInt(getContentPane().getComponentCount());
 			for(Component c : getContentPane()) {
 				ViewItem vi = (ViewItem)c;
