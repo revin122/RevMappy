@@ -1,20 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resource majorVersion="1" minorVersion="9" useXmlUI="false">
+    <image name="fb.png"  />
+    <image name="google.png"  />
     <image name="headerorange.png"  />
+    <image name="logo.png"  />
     <theme name="Theme">
         <val key="@includeNativeBool" value="true" />
+        <val key="ConnectWithSocialButton.derive" value="Label" />
+        <val key="ConnectWithSocialButton.fgColor" value="2775a4" />
+        <font key="ConnectWithSocialButton.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
+        <val key="ConnectWithSocialButton.padUnit" value="2,2,2,2" />
+        <val key="ConnectWithSocialButton.padding" value="4.0,4.0,4.0,4.0" />
+        <border key="CountryCodePicker.border" type="empty" />
+        <val key="CountryCodePicker.fgColor" value="000000" />
+        <font key="CountryCodePicker.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
+        <val key="CountryCodePicker.margin" value="0.0,0.0,0.0,0.0" />
+        <val key="CountryCodePicker.padUnit" value="2,2,2,2" />
+        <val key="CountryCodePicker.padding" value="3.0,4.0,4.0,2.0" />
+        <val key="CountryCodePicker.transparency" value="0" />
+        <val key="FloatingActionButton.bgColor" value="000000" />
+        <val key="FloatingActionButton.fgColor" value="ffffff" />
+        <val key="Form.bgColor" value="ffffff" />
+        <val key="Form.transparency" value="255" />
         <font key="Label.dis#font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.5" />
-        <font key="Label.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.5" />
+        <val key="Label.fgColor" value="000000" />
+        <font key="Label.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.2" />
+        <val key="Label.margin" value="0.0,0.0,0.0,0.0" />
         <val key="Label.padUnit" value="2,2,2,2" />
-        <val key="Label.padding" value="4.0,4.0,3.0,3.0" />
+        <val key="Label.padding" value="4.0,4.0,4.0,4.0" />
+        <val key="Label.transparency" value="0" />
+        <val key="LogoBackground.bgImage" value="tile.png" />
+        <val key="LogoBackground.bgType" value="2" />
+        <val key="LogoBackground.marUnit" value="2,2,2,2" />
+        <val key="LogoBackground.margin" value="0.0,0.0,0.0,0.0" />
+        <val key="LogoBackground.transparency" value="255" />
+        <val key="PhoneNumberHint.fgColor" value="a4a4ac" />
+        <font key="PhoneNumberHint.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.7" />
+        <val key="PhoneNumberHint.marUnit" value="2,2,2,2" />
+        <val key="PhoneNumberHint.margin" value="0.0,0.0,0.0,0.0" />
+        <val key="PhoneNumberHint.padUnit" value="2,2,2,2" />
+        <val key="PhoneNumberHint.padding" value="3.0,5.0,0.0,4.0" />
+        <val key="PhoneNumberHint.transparency" value="0" />
+        <border key="Separator.border" type="underline"  millimeters="false" thickness="2.0" color="15592941" />
+        <font key="Separator.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.7" />
+        <val key="Separator.margin" value="0.0,0.0,0.0,0.0" />
+        <val key="Separator.padUnit" value="2,2,0,2" />
+        <val key="Separator.padding" value="0.0,2.0,0.0,0.0" />
+        <val key="Separator.transparency" value="0" />
+        <val key="SquareLogo.bgColor" value="ffffff" />
+        <val key="SquareLogo.derive" value="WhiteOnBlackTitle" />
+        <val key="SquareLogo.fgColor" value="000000" />
+        <font key="SquareLogo.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
+        <val key="SquareLogo.marUnit" value="2,2,2,2" />
+        <val key="SquareLogo.margin" value="0.0,0.0,0.0,0.0" />
+        <val key="SquareLogo.padUnit" value="2,2,2,2" />
+        <val key="SquareLogo.padding" value="2.0,2.0,2.0,2.0" />
+        <val key="SquareLogo.transparency" value="255" />
         <border key="Task.border" type="underline"  millimeters="false" thickness="2.0" color="13421772" />
         <val key="Task.padding" value="0.0,0.0,0.0,0.0" />
+        <border key="TextField.border" type="underline"  millimeters="false" thickness="2.0" color="0" />
+        <val key="TextField.fgColor" value="000000" />
+        <font key="TextField.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
+        <val key="TextField.marUnit" value="2,2,2,2" />
+        <val key="TextField.margin" value="0.0,0.0,4.0,4.0" />
+        <val key="TextField.padUnit" value="2,2,2,2" />
+        <val key="TextField.padding" value="3.0,1.0,0.0,0.0" />
+        <val key="TextField.transparency" value="0" />
+        <val key="TextHint.fgColor" value="a4a4ac" />
+        <font key="TextHint.font" type="ttf" face="0" style="0" size="0" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="2.8" />
+        <val key="TextHint.marUnit" value="2,2,0,2" />
+        <val key="TextHint.margin" value="0.0,0.0,4.0,4.0" />
+        <val key="TextHint.padUnit" value="2,2,2,2" />
+        <val key="TextHint.padding" value="3.0,1.0,0.0,0.0" />
+        <val key="TextHint.transparency" value="0" />
         <val key="Title.fgColor" value="000000" />
         <font key="Title.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="1" actualSize="18.0" />
         <val key="Title.transparency" value="0" />
-        <val key="TitleCommand.fgColor" value="ffffff" />
-        <font key="TitleCommand.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="5.0" />
+        <val key="TitleCommand.fgColor" value="000000" />
+        <font key="TitleCommand.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="4.0" />
+        <val key="TitleCommand.margin" value="0.0,0.0,0.0,0.0" />
+        <val key="TitleCommand.padUnit" value="2,2,2,2" />
+        <val key="TitleCommand.padding" value="3.0,1.0,4.0,4.0" />
         <val key="TitleCommand.transparency" value="0" />
         <border key="ToggleButton.border" type="empty" />
         <val key="ToggleButton.derive" value="ToggleButton" />
@@ -22,17 +89,32 @@
         <border key="ToggleButton.sel#border" type="empty" />
         <val key="ToggleButton.sel#derive" value="ToggleButton" />
         <val key="ToggleButton.sel#fgColor" value="6868FD" />
-        <val key="Toolbar.bgColor" value="000000" />
-        <val key="Toolbar.bgImage" value="headerorange.png" />
-        <val key="Toolbar.bgType" value="33" />
-        <border key="Toolbar.border" type="underline"  millimeters="false" thickness="1.0" color="0" />
+        <border key="Toolbar.border" type="empty" />
         <val key="Toolbar.dis#bgImage" value="headerorange.png" />
         <val key="Toolbar.dis#bgType" value="1" />
-        <val key="Toolbar.fgColor" value="000000" />
         <val key="Toolbar.padUnit" value="2,2,2,2" />
         <val key="Toolbar.padding" value="3.0,3.0,3.0,3.0" />
+        <val key="Toolbar.transparency" value="0" />
+        <val key="VroomRevMappy.derive" value="Label" />
+        <font key="VroomRevMappy.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="4.8" />
+        <val key="VroomRevMappy.padUnit" value="2,2,2,2" />
+        <val key="VroomRevMappy.padding" value="4.0,3.0,4.0,4.0" />
+        <val key="WhiteOnBlackTitle.fgColor" value="ffffff" />
+        <font key="WhiteOnBlackTitle.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="4.0" />
+        <val key="WhiteOnBlackTitle.marUnit" value="2,2,2,2" />
+        <val key="WhiteOnBlackTitle.margin" value="0.0,0.0,0.0,0.0" />
+        <val key="WhiteOnBlackTitle.padUnit" value="2,2,2,2" />
+        <val key="WhiteOnBlackTitle.padding" value="1.0,3.0,3.0,3.0" />
+        <val key="WhiteOnBlackTitle.transparency" value="0" />
+        <val key="WhiteOnBlackTitleLeftMargin.derive" value="WhiteOnBlackTitle" />
+        <font key="WhiteOnBlackTitleLeftMargin.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.0" />
+        <val key="WhiteOnBlackTitleLeftMargin.marUnit" value="2,2,2,2" />
+        <val key="WhiteOnBlackTitleLeftMargin.margin" value="0.0,0.0,8.0,0.0" />
+        <val key="WhiteOnBlackTitleLeftMargin.padUnit" value="2,2,2,2" />
+        <val key="WhiteOnBlackTitleLeftMargin.padding" value="3.0,3.0,3.0,3.0" />
         <border key="press#border" type="empty" />
         <val key="press#derive" value="ToggleButton" />
         <val key="press#fgColor" value="6868FD" />
     </theme>
+    <image name="tile.png"  />
 </resource>

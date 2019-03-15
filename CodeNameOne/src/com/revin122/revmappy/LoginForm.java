@@ -1,92 +1,74 @@
 package com.revin122.revmappy;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-
-import com.codename1.components.FloatingActionButton;
-import com.codename1.components.ToastBar;
-import com.codename1.io.Log;
-import com.codename1.ui.FontImage;
-import com.codename1.ui.Form;
-import com.codename1.ui.events.ActionListener;
-import com.codename1.ui.layouts.BoxLayout;
-import com.revin122.revmappy.views.ViewItem;
+import com.codename1.components.SpanButton;
+import com.codename1.ui.Button;
 import com.codename1.ui.CN;
-import com.codename1.ui.Component;
+import com.codename1.ui.Container;
+import com.codename1.ui.Form;
+import com.codename1.ui.Image;
+import com.codename1.ui.Label;
+import com.codename1.ui.geom.Dimension;
+import com.codename1.ui.layouts.BorderLayout;
+import com.codename1.ui.layouts.BoxLayout;
+import com.codename1.ui.layouts.LayeredLayout;
+import com.codename1.ui.util.Effects;
+import com.codename1.ui.util.Resources;
+import com.revin122.revmappy.views.CountryCodePicker;
 
 public class LoginForm extends Form {
-	private final static String FILENAME = "saveitems";
-	private ActionListener saveListener;
 	
 	public LoginForm() {
-		super("RevMappy", BoxLayout.y());
+		super(new BorderLayout());
 		
-		getToolbar().addMaterialCommandToRightBar("", FontImage.MATERIAL_CLEAR_ALL, e -> clearAll());
+		Label squareLogo = new Label("", Resources.getGlobalResources().getImage("logo.png"), "SquareLogo") {
+			protected Dimension calcPreferredSize() {
+				Dimension size = super.calcPreferredSize();
+				size.setHeight(size.getWidth());
+				return size;
+			}
+		};
 		
-		FloatingActionButton fab = FloatingActionButton.createFAB(FontImage.MATERIAL_ADD);
-		fab.bindFabToContainer(this);
-		fab.addActionListener(e -> addItem());
+		Label placeholder = new Label();
+		Container logo = LayeredLayout.encloseIn(placeholder,
+				BorderLayout.centerAbsolute(squareLogo));
 		
-		load();
-	}
-	
-	private ActionListener getAutoSave() {
-		if(saveListener == null) {
-			saveListener = (e) -> save();
-		}
-		return saveListener;
-	}
-	
-	private void addItem() {
-		ViewItem viewItem = new ViewItem("", false, getAutoSave());
-		add(viewItem);
-		revalidate();
-		viewItem.edit();
-	}
-	
-	private void clearAll() {
-		int cc = getContentPane().getComponentCount();
-		for(int i = cc - 1; i >= 0; i--) {
-			ViewItem vi = (ViewItem)getContentPane().getComponentAt(i);
-			if(vi.isChecked()) {
-				vi.remove();
+		CN.startThread(() -> {
+			final Image shadow = Effects.squareShadow(squareLogo.getPreferredW(), squareLogo.getPreferredH(), CN.convertToPixels(14), 0.35f);
+			CN.callSerially(() -> {
+				logo.replace(placeholder, BorderLayout.centerAbsolute(new Label(shadow, "Container")), null);
+				revalidate();
+			});
+		}, "Shadow Maker").start();
+		
+		logo.setUIID("LogoBackground");
+		add(CENTER, logo);
+		Label getMoving = new Label("Vroom with RevMappy", "VroomRevMappy");
+		CountryCodePicker ccButton = new CountryCodePicker() {
+			protected void showPickerForm() {
+//				new EnterMobileNumberForm.show();
 			}
-		}
-		save();
-		getContentPane().animateLayout(300);
+		};
+		
+		SpanButton phoneNumber = new SpanButton("Enter your number", "PhoneNumberHint");
+		phoneNumber.getTextComponent().setColumns(80);
+		phoneNumber.getTextComponent().setRows(2);
+		phoneNumber.getTextComponent().setGrowByContent(false);
+		phoneNumber.setUIID("Container");
+//		phoneNumber.addActionListener(e -> new EnterMobileNumberForm.show());
+		Container phonePicking = BorderLayout.centerCenterEastWest(phoneNumber, null, ccButton);
+		phonePicking.setUIID("Separator");
+		Button social = new Button("Or connect with social", "ConnectWithSocialButton");
+//		social.addActionListener(e -> new FacebookOrGoogleLoginForm().show());
+		add(BOTTOM, BoxLayout.encloseY(getMoving, phonePicking, social));
 	}
 	
-	private void load() {
-		if(CN.existsInFileSystem(LoginForm.FILENAME)) {
-			try(DataInputStream inputStream = new DataInputStream(
-					CN.createStorageInputStream(LoginForm.FILENAME));) {
-				int size = inputStream.readInt();
-				for (int iter = 0; iter < size; iter++) {
-					boolean checked = inputStream.readBoolean();
-					ViewItem vi = new ViewItem(inputStream.readUTF(), checked, getAutoSave());
-					add(vi);
-				}
-			} catch (Exception e) {
-				Log.e(e);
-				ToastBar.showErrorMessage("Error loading list");
-			}
-		}
+	@Override
+	protected boolean shouldPaintStatusBar() {
+		return false;
 	}
 	
-	private void save() {
-		try(DataOutputStream outputStream = new DataOutputStream(
-				CN.createStorageOutputStream(LoginForm.FILENAME))) {
-			outputStream.writeInt(getContentPane().getComponentCount());
-			for(Component c : getContentPane()) {
-				ViewItem vi = (ViewItem)c;
-				outputStream.writeBoolean(vi.isChecked());
-				outputStream.writeUTF(vi.getText());
-			}
-		} catch (IOException e) {
-			Log.e(e);
-			ToastBar.showErrorMessage("Error saving list");
-		}
-				
+	@Override
+	protected void initGlobalToolbar() {
+		
 	}
 }
