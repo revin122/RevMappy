@@ -45,7 +45,7 @@ public class LoginForm extends Form {
 		Label getMoving = new Label("Vroom with RevMappy", "VroomRevMappy");
 		CountryCodePicker ccButton = new CountryCodePicker() {
 			protected void showPickerForm() {
-//				new EnterMobileNumberForm.show();
+				new EnterMobileNumberForm().show();
 			}
 		};
 		
@@ -54,11 +54,11 @@ public class LoginForm extends Form {
 		phoneNumber.getTextComponent().setRows(2);
 		phoneNumber.getTextComponent().setGrowByContent(false);
 		phoneNumber.setUIID("Container");
-//		phoneNumber.addActionListener(e -> new EnterMobileNumberForm.show());
+		phoneNumber.addActionListener(e -> new EnterMobileNumberForm().show());
 		Container phonePicking = BorderLayout.centerCenterEastWest(phoneNumber, null, ccButton);
 		phonePicking.setUIID("Separator");
 		Button social = new Button("Or connect with social", "ConnectWithSocialButton");
-//		social.addActionListener(e -> new FacebookOrGoogleLoginForm().show());
+		social.addActionListener(e -> new FacebookOrGoogleLoginForm().show());
 		add(BOTTOM, BoxLayout.encloseY(getMoving, phonePicking, social));
 	}
 	

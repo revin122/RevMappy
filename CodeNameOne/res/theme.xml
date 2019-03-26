@@ -19,8 +19,28 @@
         <val key="CountryCodePicker.padUnit" value="2,2,2,2" />
         <val key="CountryCodePicker.padding" value="3.0,4.0,4.0,2.0" />
         <val key="CountryCodePicker.transparency" value="0" />
+        <val key="Digit.derive" value="TextField" />
+        <font key="Digit.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.7" />
+        <val key="Digit.marUnit" value="0,2,0,0" />
+        <val key="Digit.margin" value="0.0,0.0,4.0,0.0" />
+        <val key="Digit.padUnit" value="2,2,2,2" />
+        <val key="Digit.padding" value="1.0,1.0,1.0,1.0" />
+        <val key="ErrorLabel.bgColor" value="ffffff" />
+        <val key="ErrorLabel.fgColor" value="cc0000" />
+        <font key="ErrorLabel.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.8" />
+        <val key="ErrorLabel.marUnit" value="2,2,2,2" />
+        <val key="ErrorLabel.margin" value="0.0,0.0,0.0,0.0" />
+        <val key="ErrorLabel.padUnit" value="2,2,2,2" />
+        <val key="ErrorLabel.padding" value="3.0,3.0,3.0,3.0" />
         <val key="FloatingActionButton.bgColor" value="000000" />
         <val key="FloatingActionButton.fgColor" value="ffffff" />
+        <val key="ForgotPassword.fgColor" value="2775a4" />
+        <font key="ForgotPassword.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.5" />
+        <val key="ForgotPassword.marUnit" value="2,2,2,2" />
+        <val key="ForgotPassword.margin" value="0.0,0.0,0.0,0.0" />
+        <val key="ForgotPassword.padUnit" value="2,2,2,2" />
+        <val key="ForgotPassword.padding" value="0.0,2.5,4.0,4.0" />
+        <val key="ForgotPassword.transparency" value="0" />
         <val key="Form.bgColor" value="ffffff" />
         <val key="Form.transparency" value="255" />
         <font key="Label.dis#font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.5" />
@@ -42,6 +62,11 @@
         <val key="PhoneNumberHint.padUnit" value="2,2,2,2" />
         <val key="PhoneNumberHint.padding" value="3.0,5.0,0.0,4.0" />
         <val key="PhoneNumberHint.transparency" value="0" />
+        <font key="ResendCode.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.7" />
+        <val key="ResendCode.marUnit" value="2,2,2,2" />
+        <val key="ResendCode.margin" value="0.0,0.0,0.0,0.0" />
+        <val key="ResendCode.padUnit" value="2,2,2,2" />
+        <val key="ResendCode.padding" value="0.0,6.0,3.0,0.0" />
         <border key="Separator.border" type="underline"  millimeters="false" thickness="2.0" color="15592941" />
         <font key="Separator.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="3.7" />
         <val key="Separator.margin" value="0.0,0.0,0.0,0.0" />
